@@ -92,6 +92,54 @@ section:last-child {
   color: black;
 }
 
+.flair, .flair:before, .flair:after {
+  width: 208px;
+  height: 58px;
+}
+
+.flair {
+  position: relative;
+  display: block;
+  margin: 50px auto 0;
+}
+
+.flair:before, .flair:after {
+  content: '';
+  position: absolute;
+  border: 20px solid black;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+}
+.flair:before {
+  border-color: darkgreen;
+  border-top-color: #eee;
+  border-bottom-color: #eee;
+  left: -20px;
+  top: -40px;
+  height: 98px;
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition-property: -webkit-transform;
+          transition-property: transform;
+}
+.flair:hover:before {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+.flair:after {
+  border-left: none;
+  border-right: none;
+  left: 0;
+  top: -20px;
+  -webkit-transition-property: border-top-color, border-bottom-color;
+          transition-property: border-top-color, border-bottom-color;
+}
+.flair:hover:after {
+  border-color: darkgreen;
+}
+
 .contact {
   padding: 20px 0 50px;
   background: darkgreen;
@@ -127,4 +175,7 @@ section:last-child {
 
 .tac {
   text-align: center;
+}
+.posr {
+  position: relative;
 }
