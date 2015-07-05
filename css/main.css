@@ -92,51 +92,66 @@ section:last-child {
   color: black;
 }
 
-.flair, .flair:before/* , .flair:after */ {
+.flair, .flair:after {
   width: 208px;
-  height: 58px;
 }
 
 .flair {
   position: relative;
   display: block;
   margin: 30px auto 0;
-  box-shadow: black 0 0 0 10px;
+  height: 58px;
+  box-shadow: black 0 10px 0 10px,
+              darkgreen 0 0 0 10px;
+}
+.flair-image {
+  position: relative;
+  z-index: 1;
 }
 
-.flair:before/* , .flair:after */ {
+.flair:before, .flair:after {
   content: '';
   position: absolute;
   left: -10px;
   top: -10px;
-  border: 10px solid darkgreen;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
+  -webkit-transition-duration: .15s;
+          transition-duration: .15s;
   -webkit-transition-property: -webkit-transform;
           transition-property: transform;
 }
+
 .flair:before {
+  background: black;
+  width: 228px;
+  height: 10px;
+}
+.flair:hover:before {
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition-delay: .15s;
+          transition-delay: .15s;
+}
+
+.flair:after {
+  border: 10px solid darkgreen;
   border-top-color: transparent;
-  /*border-bottom-color: transparent;*/
   height: 48px;
   -webkit-transform: scaleY(0);
       -ms-transform: scaleY(0);
           transform: scaleY(0);
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition-delay: .15s;
+          transition-delay: .15s;
 }
-/*
-.flair:after {
-  border-left-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  -webkit-transform: scaleX(0);
-      -ms-transform: scaleX(0);
-          transform: scaleX(0);
-}
-*/
-.flair:hover:before/* , .flair:hover:after */ {
+.flair:hover:after {
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
 .contact {
@@ -174,7 +189,4 @@ section:last-child {
 
 .tac {
   text-align: center;
-}
-.posr {
-  position: relative;
 }
