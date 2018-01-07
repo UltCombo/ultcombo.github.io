@@ -1,0 +1,60 @@
+.projects {
+  margin-bottom: 10px;
+  min-height: 300px;
+}
+
+.workspace {
+  animation: enter .15s var(--deceleration-curve);
+}
+
+.chevron {
+  display: inline-block;
+  color: var(--terminal-chevron-color);
+  user-select: none;
+}
+
+/*
+  Termynal customizations
+*/
+#termynal:not([data-termynal]) {
+  display: none;
+}
+
+[data-termynal] {
+  width: 100% !important;
+  padding: 45px 17px 25px;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  min-height: 91px !important;
+  animation: enter .15s var(--deceleration-curve);
+}
+
+[data-termynal]:before {
+  width: 13px;
+  height: 13px;
+}
+
+[data-termynal] p {
+  margin: 1em 0 0;
+}
+
+[data-ty] {
+  line-height: normal;
+}
+
+[data-ty]:before {
+  display: none;
+}
+
+[data-ty=input] {
+  margin-left: 8px;
+  display: inline-block;
+}
+
+[data-ty-cursor]:after {
+  margin-top: -5px; /* Fix text baseline change when removing cursor */
+  margin-left: .1em;
+  display: inline-block;
+  color: var(--terminal-cursor-color);
+}

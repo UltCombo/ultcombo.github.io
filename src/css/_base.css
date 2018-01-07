@@ -1,0 +1,42 @@
+:root {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--default-text-color);
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
+p {
+  margin: .5em 0;
+}
+
+em, i {
+  font-family: Lato, sans-serif;
+  font-size: 1.05em;
+}
+
+a:not(.badge-wrapper) {
+  color: inherit;
+  font-family: var(--accent-font);
+  font-variation-settings: 'wdth' 90, 'wght' 100;
+  text-decoration-skip: ink;
+  transition: font-variation-settings .1s;
+}
+
+a:not(.badge-wrapper):hover,
+a:not(.badge-wrapper):focus {
+  font-variation-settings: 'wdth' 90, 'wght' 130;
+}
+
+.content-section {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 10px;
+}

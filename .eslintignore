@@ -1,0 +1,11 @@
+# Built files
+/bundle.js
+/sw.js
+
+# Intermediary build files
+/index.js
+/main.js
+/vendor.js
+
+# Vendor files
+/src/vendor

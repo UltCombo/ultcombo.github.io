@@ -1,1 +1,14 @@
-bk/
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Intermediary build files
+/index.js
+/main.js
+/vendor.js
+.eslintcache
+
+# System
+.DS_Store
+Thumbs.db

@@ -1,0 +1,25 @@
+@keyframes caret {
+  0%, 30% {
+    border-right-color: transparent;
+  }
+  60%, 100% {
+    border-right-color: var(--terminal-cursor-color);
+  }
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes intro-highlight {
+  100% {
+    transform: scaleX(0);
+  }
+}

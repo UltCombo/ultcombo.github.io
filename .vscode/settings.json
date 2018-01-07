@@ -1,0 +1,21 @@
+{
+  "files.exclude": {
+    // Default values.
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+
+    // Compiled and intermediary build files.
+    "bundle.js": true,
+    "sw.js": true,
+    "index.html": true,
+    "index.js": true,
+    "main.css": true,
+    "main.js": true,
+    "vendor.css": true,
+    "vendor.js": true,
+    ".eslintcache": true,
+  }
+}

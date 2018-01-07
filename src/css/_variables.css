@@ -1,0 +1,16 @@
+:root {
+  --default-text-color: #c5c8c6;
+  --intro-text-color: #1d1f21;
+  --highlight-color: linear-gradient(90deg,hsl(156, 73%, 52%) 10%,hsl(94, 73%, 52%) 50%,hsl(156, 73%, 52%) 90%);
+  --terminal-cursor-color: rgba(51, 255, 0, .8);
+  --terminal-chevron-color: rgba(51, 255, 0, .7);
+  --background-color: #1d1f21;
+  --deprecated-color: #969896;
+  --avatar-size: 90px;
+  --intro-highlight-size: 10px;
+  --badge-background-color: #ededed;
+  --badge-padding: 5px;
+  --badge-spacing-inside: 7px;
+  --accent-font: GradeGX, 'Fira Mono', monospace;
+  --deceleration-curve: cubic-bezier(0.0, 0.0, 0.2, 1);
+}

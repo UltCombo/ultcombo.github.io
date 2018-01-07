@@ -1,0 +1,143 @@
+.intro {
+  position: relative;
+  margin-bottom: 50px;
+  background: var(--default-text-color);
+  color: var(--intro-text-color);
+  min-height: 221px; /* Try to avoid reflows due to font loading */
+  animation: enter .15s var(--deceleration-curve);
+}
+
+.avatar {
+  margin: -30px 0 -4px;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  background: var(--default-text-color);
+}
+
+.intro-content-section {
+  overflow: hidden; /* Improve badges enter animation */
+  animation: enter .15s var(--deceleration-curve) .5s backwards;
+}
+
+.badges {
+  margin: 15px auto 10px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 670px;
+  animation: enter .15s var(--deceleration-curve) .95s backwards;
+}
+
+.badge-wrapper {
+  color: inherit;
+  text-decoration: none;
+}
+
+.badge-wrapper:hover .badge,
+.badge-wrapper:focus .badge {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 2px -1px #808080;
+  transition: all .2s var(--deceleration-curve);
+  transition-property: transform, box-shadow;
+}
+
+.badge {
+  display: flex;
+  padding: var(--badge-padding) var(--badge-spacing-inside);
+  min-width: 210px;
+  background: var(--badge-background-color);
+  border-radius: 4px;
+}
+
+.badge-image {
+  max-width: 35px;
+  max-height: 35px;
+  flex-grow: 1;
+  align-self: center;
+}
+
+.badge-contents {
+  margin-left: var(--badge-spacing-inside);
+}
+
+.badge-username {
+  margin-bottom: 1px;
+  font-size: 14px;
+}
+
+.badge-stats {
+  font-size: 13px;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+.badge-stats-block {
+  display: inline-block;
+}
+
+.badge-stats-block:not(:last-child) {
+  margin-right: var(--badge-spacing-inside);
+}
+
+.badge-stat-value {
+  font-family: var(--accent-font);
+  font-variation-settings: 'wdth' 90, 'wght' 120;
+}
+
+.stackoverflow-gold-badges,
+.stackoverflow-silver-badges,
+.stackoverflow-bronze-badges {
+  margin-right: 3px;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.stackoverflow-gold-badges {
+  background: gold;
+}
+
+.stackoverflow-silver-badges {
+  background: silver;
+}
+
+.stackoverflow-bronze-badges {
+  background: #cd9965;
+}
+
+.npm-badge-image {
+  margin-top: 1px;
+}
+
+.intro:before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  content: '';
+  display: block;
+  height: var(--intro-highlight-size);
+  background: var(--highlight-color);
+}
+
+.intro:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: var(--intro-highlight-size);
+  background: var(--background-color);
+  animation: intro-highlight .3s var(--deceleration-curve) 1.45s forwards;
+}
+
+@media (max-width: 680px) {
+  .badges {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .badge-wrapper:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
