@@ -41,7 +41,7 @@ const githubStaleWhileRevalidateStrategy = {
       // Cache response asynchronously if valid.
       if (networkResponse.status === 200) {
         localforage.setItem(requestHash, {
-          contentType: networkResponse.headers.get('content-type'),
+          contentType: networkResponse.headers.get('Content-Type'),
           body: await networkResponse.clone().text(),
         });
       }
