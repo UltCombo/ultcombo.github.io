@@ -17,7 +17,7 @@ const cacheFirstStrategy = workboxSW.strategies.cacheFirst({
 const staleWhileRevalidateStrategy = workboxSW.strategies.staleWhileRevalidate();
 
 // Resources.
-workboxSW.router.registerRoute(/\.(?:png|woff2)(?:\?|$)/, cacheFirstStrategy);
+workboxSW.router.registerRoute(/\.(?:png|jpg|woff2)(?:\?|$)/, cacheFirstStrategy);
 workboxSW.router.registerRoute(RegExp('^https://fonts.gstatic.com/'), cacheFirstStrategy);
 workboxSW.router.registerRoute(RegExp('^https://cdn.polyfill.io/'), staleWhileRevalidateStrategy);
 
